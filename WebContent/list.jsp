@@ -8,7 +8,6 @@
 	PhoneDao phoneDao = new PhoneDao();
 	List<PersonVo> personList = phoneDao.getPersonList();
 	
-	System.out.println(personList);
 %>
 
 <!DOCTYPE html>
@@ -38,8 +37,8 @@
 				<td><%=personList.get(i).getCompany() %></td>
 			</tr>
 			<tr>
-				<td>  </td>
-				<td><a href="">삭제</a></td>
+				<td><a href="./updateForm.jsp?id=<%=personList.get(i).getPersonId()%>">수정</a></td>
+				<td><a href="./delete.jsp?id=<%=personList.get(i).getPersonId()%>">삭제</a></td>
 			</tr>
 		</table>
 		<br>
